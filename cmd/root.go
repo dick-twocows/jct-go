@@ -26,6 +26,8 @@ func init() {
 
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.cobra.yaml)")
 	rootCmd.PersistentFlags().Bool("viper", true, "use Viper for configuration")
+
+	rootCmd.AddCommand(describeCmd)
 }
 
 func initConfig() {
